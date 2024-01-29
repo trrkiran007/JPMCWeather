@@ -1,4 +1,4 @@
-package com.jpmc.weather
+package com.jpmc.weather.view
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
