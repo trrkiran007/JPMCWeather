@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    kotlin("kapt")
 }
 
 android {
@@ -37,6 +38,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    kapt {
+        useBuildCache = true
+    }
     buildFeatures {
         compose = true
     }
@@ -55,6 +59,9 @@ dependencies {
     implementation(libs.core.ktx)
     implementation(libs.lifecycle.runtime.ktx)
     implementation(libs.activity.compose)
+    implementation(libs.runtime)
+    implementation(libs.runtime.livedata)
+    implementation(libs.lifecycle.viewmodel.compose)
     implementation(platform(libs.compose.bom))
     implementation(libs.ui)
     implementation(libs.ui.graphics)
@@ -65,7 +72,9 @@ dependencies {
     implementation(libs.okhttp)
     testImplementation(libs.junit)
     implementation(libs.dagger)
-    annotationProcessor(libs.daggercompiler)
+    implementation(libs.coil)
+    implementation(libs.coil.compose)
+    kapt(libs.dagger.compiler)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
     androidTestImplementation(platform(libs.compose.bom))
