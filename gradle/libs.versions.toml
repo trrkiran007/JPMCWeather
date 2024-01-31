@@ -3,6 +3,7 @@ agp = "8.2.0"
 kotlin = "1.9.0"
 core-ktx = "1.10.1"
 junit = "4.13.2"
+mockito = "3.11.2"
 androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.6.1"
@@ -13,6 +14,7 @@ dagger = "2.50"
 retrofit = "2.9.0"
 okhttp = "4.11.0"
 coil = "2.5.0"
+location = "18.0.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -39,6 +41,9 @@ retrofitgson = { group="com.squareup.retrofit2", name = "converter-gson", versio
 okhttp = { group="com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
 coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+location = { group = "com.google.android.gms", name = "play-services-location", version.ref="location"}
+mockito = { group = "org.mockito", name = "mockito-core", version.ref = "mockito"}
+mockito-android = { group = "org.mockito", name = "mockito-android", version.ref= "mockito"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

@@ -11,6 +11,9 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+/**
+ * App Module, provides Retrofit and also Binds Weather API and Weather repository.
+ */
 @Module
 abstract class AppModule {
 
